@@ -1,4 +1,4 @@
-import { Image, Stylesheet, Platform, Text, View } from "react-native";
+import { Image, StyleSheet, Platform, Text, View } from "react-native";
 import React from "react";
 
 export default function HomeScreen() {
@@ -9,7 +9,7 @@ export default function HomeScreen() {
   );
 }
 
-const styles = Stylesheet.create({
+const styles = StyleSheet.create({
   container: {
     alignItems: "center",
     flex: 1,
