@@ -26,6 +26,7 @@ const App = () => {
                 Simplifying Meditation for Everyone
               </Text>
             </View>
+            <View></View>
             <StatusBar style="light" />
           </SafeAreaView>
         </LinearGradient>
