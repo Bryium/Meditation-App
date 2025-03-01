@@ -1,6 +1,7 @@
 import { View, Text, ImageBackground } from "react-native";
 import { SafeAreaView } from "react-native-safe-area-context";
 import React from "react";
+import { StatusBar } from "expo-status-bar";
 import { LinearGradient } from "expo-linear-gradient";
 import beachImage from "@/assets/meditation-images/beach.webp";
 
@@ -25,6 +26,7 @@ const App = () => {
                 Simplifying Meditation for Everyone
               </Text>
             </View>
+            <StatusBar style="light" />
           </SafeAreaView>
         </LinearGradient>
       </ImageBackground>
