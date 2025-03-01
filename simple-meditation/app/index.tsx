@@ -1,5 +1,6 @@
 import { View, Text, ImageBackground } from "react-native";
 import React from "react";
+import { LinearGradient } from "expo-linear-gradient";
 
 import beachImage from "@/assets/meditation-images/beach.webp";
 
@@ -9,11 +10,14 @@ const App = () => {
       <ImageBackground
         source={beachImage}
         resizeMode="cover"
-        style={{ flex: 1, justifyContent: "center", alignItems: "center" }}
+        style={{ flex: 1 }}
       >
-        <Text style={{ fontSize: 24, color: "white", fontWeight: "bold" }}>
-          App
-        </Text>
+        <LinearGradient
+          style={{ flex: 1, justifyContent: "center", alignItems: "center" }}
+          colors={["rgba(0,0,0,0.6)", "rgba(0,0,0,0.8)"]}
+        >
+          <Text style={{ color: "white", fontSize: 30 }}>App</Text>
+        </LinearGradient>
       </ImageBackground>
     </View>
   );
