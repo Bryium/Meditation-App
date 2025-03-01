@@ -22,7 +22,7 @@ const CustomButtons = ({
       }
       onPress={onPress}
     >
-      <Text className={"font-semibold text-lg"}>CustomButtons</Text>
+      <Text className={"font-semibold text-lg ${textStyles}"}>{title}</Text>
     </TouchableOpacity>
   );
 };

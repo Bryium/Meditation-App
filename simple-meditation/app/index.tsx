@@ -4,6 +4,7 @@ import React from "react";
 import { StatusBar } from "expo-status-bar";
 import { LinearGradient } from "expo-linear-gradient";
 import beachImage from "@/assets/meditation-images/beach.webp";
+import CustomButtons from "@/components/CustomButtons";
 
 const App = () => {
   return (
@@ -26,7 +27,9 @@ const App = () => {
                 Simplifying Meditation for Everyone
               </Text>
             </View>
-            <View></View>
+            <View>
+              <CustomButtons onPress={() => {}} title="Get Started" />
+            </View>
             <StatusBar style="light" />
           </SafeAreaView>
         </LinearGradient>
