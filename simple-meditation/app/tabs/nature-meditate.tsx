@@ -1,6 +1,7 @@
 import { View, Text } from "react-native";
 import React from "react";
 import AppGradient from "@/components/AppGradient";
+import { StatusBar } from "expo-status-bar";
 
 const NatureMeditate = () => {
   return (
@@ -15,6 +16,7 @@ const NatureMeditate = () => {
           </Text>
         </View>
       </AppGradient>
+      <StatusBar style="light" />
     </View>
   );
 };
