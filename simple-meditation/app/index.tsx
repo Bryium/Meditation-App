@@ -31,7 +31,7 @@ const App = () => {
             </View>
             <View>
               <CustomButtons
-                onPress={() => router.push("/test")}
+                onPress={() => router.push("/nature-meditate")}
                 title="Get Started"
               />
             </View>

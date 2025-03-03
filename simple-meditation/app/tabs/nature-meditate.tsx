@@ -1,12 +1,12 @@
-import { View, Text } from 'react-native'
-import React from 'react'
+import { View, Text } from "react-native";
+import React from "react";
 
-const nature-meditate = () => {
+const NatureMeditate = () => {
   return (
     <View>
-      <Text>nature-meditate</Text>
+      <Text>NatureMeditate</Text>
     </View>
-  )
-}
+  );
+};
 
-export default nature-meditate
+export default NatureMeditate;
