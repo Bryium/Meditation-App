@@ -28,7 +28,10 @@ const App = () => {
               </Text>
             </View>
             <View>
-              <CustomButtons onPress={() => {}} title="Get Started" />
+              <CustomButtons
+                onPress={() => console.log("tap")}
+                title="Get Started"
+              />
             </View>
             <StatusBar style="light" />
           </SafeAreaView>
