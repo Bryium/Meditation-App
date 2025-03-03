@@ -9,7 +9,7 @@
     "userInterfaceStyle": "automatic",
     "newArchEnabled": true,
     "splash": {
-      "image": "./assets/images/splash.png",
+      "image": "./assets/simpleMeditationLogo.png",
       "resizeMode": "contain",
       "backgroundColor": "#ffffff"
     },
