@@ -1,6 +1,7 @@
 import { View, Text } from "react-native";
 import React from "react";
 import { Tabs } from "expo-router";
+import { Ionicons } from "@expo/vector-icons"; // Import Ionicons from Expo
 import Colors from "@/constants/Colors";
 
 const TabsLayout = () => {
@@ -8,12 +9,17 @@ const TabsLayout = () => {
     <Tabs
       screenOptions={{
         headerShown: false,
-        tabBarActiveBackgroundColor: Colors.primary,
+        tabBarActiveTintColor: Colors.primary,
       }}
     >
       <Tabs.Screen
         name="nature-meditate"
-        options={{ tabBarLabel: "Meditate" }}
+        options={{
+          tabBarLabel: "Meditate",
+          tabBarIcon: ({ color, size }) => (
+            <Ionicons name="md-leaf-outline" size={size} color={color} />
+          ),
+        }}
       />
     </Tabs>
   );

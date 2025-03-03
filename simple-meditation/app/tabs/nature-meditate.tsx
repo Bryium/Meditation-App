@@ -40,7 +40,7 @@ const NatureMeditate = () => {
                   >
                     <Text className="text-gray-100 text-3xl font-bold text-center">
                       {item.title}
-                    </Text>{" "}
+                    </Text>
                   </LinearGradient>
                 </ImageBackground>
               </Pressable>
