@@ -21,7 +21,7 @@ const TabsLayout = () => {
             <MaterialCommunityIcons
               name="flower-tulip"
               size={24}
-              color="black"
+              color={color}
             />
           ),
         }}
