@@ -3,7 +3,7 @@ import React from "react";
 import { Tabs } from "expo-router";
 import { Ionicons } from "@expo/vector-icons";
 import Colors from "@/constants/Colors";
-import MaterialCommunityIcons from "@expo/vector-icons/MaterialCommunityIcons";
+import { MaterialCommunityIcons, Entypo } from "@expo/vector-icons";
 
 const TabsLayout = () => {
   return (
@@ -23,6 +23,16 @@ const TabsLayout = () => {
               size={24}
               color={color}
             />
+          ),
+        }}
+      />
+
+      <Tabs.Screen
+        name="affirmations"
+        options={{
+          tabBarLabel: "Affirmations",
+          tabBarIcon: ({ color }) => (
+            <Entypo name="open-book" size={24} color={color} />
           ),
         }}
       />
