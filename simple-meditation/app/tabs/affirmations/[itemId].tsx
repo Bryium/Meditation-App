@@ -1,10 +1,10 @@
-import { View, Text, ImageBackground } from "react-native";
-import React from "react";
-import { useLocalSearchParams } from "expo-router";
+import { View, Text, ImageBackground, Pressable } from "react-native";
+import { router, useLocalSearchParams } from "expo-router";
 import { useEffect, useState } from "react";
 import { GalleryPreviewData } from "@/constants/models/AffirmationCategory";
 import AFFIRMATION_GALLERY from "@/constants/affirmation-gallery";
 import AppGradient from "@/components/AppGradient";
+import AntDesign from "@expo/vector-icons/AntDesign";
 
 const AffirmationPractice = () => {
   const { itemId } = useLocalSearchParams();
@@ -33,7 +33,12 @@ const AffirmationPractice = () => {
         resizeMode="cover"
       >
         <AppGradient colors={["rgba(0,0,0,0.3)", "rgba(0,0,0,0.9)"]}>
-          <Text>Test</Text>
+          <Pressable
+            onPress={() => router.back()}
+            className="absolute top-16 left-6 z-10"
+          >
+            <AntDesign name="leftcircle" size={50} color="white" />
+          </Pressable>
         </AppGradient>
       </ImageBackground>
     </View>

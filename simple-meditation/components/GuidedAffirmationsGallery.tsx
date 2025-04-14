@@ -24,7 +24,7 @@ const GuidedAffirmationsGallery = ({
           keyExtractor={(item) => item.id.toString()}
           horizontal
           renderItem={({ item }) => (
-            <Link href={`/affirmations/${item.id}`} asChild>
+            <Link href={`tabs/affirmations/${item.id}`} asChild>
               <Pressable>
                 <View className="h-36 w-32 rounded-md mr-4">
                   <Image
@@ -36,7 +36,6 @@ const GuidedAffirmationsGallery = ({
               </Pressable>
             </Link>
           )}
-          horizontal
         />
       </View>
     </View>
