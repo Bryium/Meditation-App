@@ -1,4 +1,4 @@
-import { View, Text } from "react-native";
+import { View, Text, ImageBackground } from "react-native";
 import React from "react";
 import { useLocalSearchParams } from "expo-router";
 import { useEffect, useState } from "react";
@@ -26,7 +26,11 @@ const AffirmationPractice = () => {
 
   return (
     <View className="flex-1">
-      <Text> AffirmationPractice</Text>
+      <ImageBackground
+        source={affirmation?.image}
+        className="flex-1"
+        resizeMode="cover"
+      ></ImageBackground>
     </View>
   );
 };
