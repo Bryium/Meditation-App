@@ -4,6 +4,7 @@ import { useLocalSearchParams } from "expo-router";
 import { useEffect, useState } from "react";
 import { GalleryPreviewData } from "@/constants/models/AffirmationCategory";
 import AFFIRMATION_GALLERY from "@/constants/affirmation-gallery";
+import AppGradient from "@/components/AppGradient";
 
 const AffirmationPractice = () => {
   const { itemId } = useLocalSearchParams();
@@ -30,7 +31,11 @@ const AffirmationPractice = () => {
         source={affirmation?.image}
         className="flex-1"
         resizeMode="cover"
-      ></ImageBackground>
+      >
+        <AppGradient colors={["rgba(0,0,0,0.3)", "rgba(0,0,0,0.9)"]}>
+          <Text>Test</Text>
+        </AppGradient>
+      </ImageBackground>
     </View>
   );
 };
