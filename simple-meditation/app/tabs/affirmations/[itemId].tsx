@@ -59,7 +59,10 @@ const AffirmationPractice = () => {
             <View className="h-full justify-center">
               <View className="h-4/5 justify-center">
                 {sentences.map((sentence, idx) => (
-                  <Text className="text-white text-3xl mb-12 font-bold text-center">
+                  <Text
+                    key={idx}
+                    className="text-white text-3xl mb-12 font-bold text-center"
+                  >
                     {sentence}.
                   </Text>
                 ))}
