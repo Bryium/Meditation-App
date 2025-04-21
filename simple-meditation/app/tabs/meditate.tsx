@@ -1,7 +1,10 @@
-import { View, Text, ImageBackground } from "react-native";
+import { View, Text, ImageBackground, Pressable } from "react-native";
 import React from "react";
 
 import MEDITATION_IMAGES from "@/constants/meditation-images";
+import AppGradient from "@/components/AppGradient";
+import AntDesign from "@expo/vector-icons/AntDesign";
+import { router } from "expo-router";
 
 const MeditateScreen = () => {
   return (
@@ -9,11 +12,17 @@ const MeditateScreen = () => {
       <ImageBackground
         source={MEDITATION_IMAGES[0]}
         resizeMode="cover"
-        className="flex-1 justify-center items-center"
+        className="flex-1 "
       >
-        <Text className="text-white text-2xl font-bold">Test</Text>
+        <AppGradient colors={["transparent", "rgba(0,0,0,0.8)"]}>
+          <Pressable
+            onPress={() => router.back()}
+            className="absloute top-16 left-6 z-10"
+          >
+            <AntDesign name="leftcircleo" size={50} color="white" />
+          </Pressable>
+        </AppGradient>
       </ImageBackground>
-      <Text className="text-center mt-4">meditate</Text>
     </View>
   );
 };
