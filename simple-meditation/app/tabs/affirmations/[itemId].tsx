@@ -16,6 +16,7 @@ const AffirmationPractice = () => {
   const { itemId } = useLocalSearchParams();
 
   const [affirmation, setAffirmation] = useState<GalleryPreviewData>();
+  const [sentences, setSentences] = useState<string[]>([]);
 
   useEffect(() => {
     for (let idx = 0; idx < AFFIRMATION_GALLERY.length; idx++) {
@@ -26,6 +27,15 @@ const AffirmationPractice = () => {
       );
       if (affirmationToStart) {
         setAffirmation(affirmationToStart);
+
+        const affirmationArray = affirmationToStart.text.split(".");
+
+        // Remove the last element if it's an empty string
+        if (affirmationArray[affirmationArray.length - 1] === "") {
+          affirmationArray.pop();
+        }
+
+        setSentences(affirmationArray);
         return;
       }
     }
@@ -48,9 +58,11 @@ const AffirmationPractice = () => {
           <ScrollView className="mt-20" showsVerticalScrollIndicator={false}>
             <View className="h-full justify-center">
               <View className="h-4/5 justify-center">
-                <Text className="text-white text-3xl mb-12 font-bold text-center">
-                  {affirmation?.text}
-                </Text>
+                {sentences.map((sentence, idx) => (
+                  <Text className="text-white text-3xl mb-12 font-bold text-center">
+                    {sentence}.
+                  </Text>
+                ))}
               </View>
             </View>
           </ScrollView>
