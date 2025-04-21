@@ -48,7 +48,9 @@ const AffirmationPractice = () => {
           <ScrollView className="mt-20" showsVerticalScrollIndicator={false}>
             <View className="h-full justify-center">
               <View className="h-4/5 justify-center">
-                <Text>{affirmation?.text}</Text>
+                <Text className="text-white text-3xl mb-12 font-bold text-center">
+                  {affirmation?.text}
+                </Text>
               </View>
             </View>
           </ScrollView>
