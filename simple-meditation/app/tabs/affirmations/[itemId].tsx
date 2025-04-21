@@ -1,4 +1,10 @@
-import { View, Text, ImageBackground, Pressable } from "react-native";
+import {
+  View,
+  Text,
+  ImageBackground,
+  Pressable,
+  ScrollView,
+} from "react-native";
 import { router, useLocalSearchParams } from "expo-router";
 import { useEffect, useState } from "react";
 import { GalleryPreviewData } from "@/constants/models/AffirmationCategory";
@@ -39,6 +45,13 @@ const AffirmationPractice = () => {
           >
             <AntDesign name="leftcircle" size={50} color="white" />
           </Pressable>
+          <ScrollView className="mt-20" showsVerticalScrollIndicator={false}>
+            <View className="h-full justify-center">
+              <View className="h-4/5 justify-center">
+                <Text>{affirmation?.text}</Text>
+              </View>
+            </View>
+          </ScrollView>
         </AppGradient>
       </ImageBackground>
     </View>
