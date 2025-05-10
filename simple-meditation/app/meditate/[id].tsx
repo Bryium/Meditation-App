@@ -18,21 +18,21 @@ const MeditateScreen = () => {
   useEffect(() => {
     let timerID: NodeJS.Timeout;
 
-    //Exit
-
     if (secondsRemaining === 0) {
       setMeditating(false);
       return;
     }
 
-    timerID = setTimeout(() => {
-      setSecondsRemaining(secondsRemaining - 1);
-    }, 1000);
+    if (isMeditating) {
+      timerID = setTimeout(() => {
+        setSecondsRemaining((prev) => prev - 1);
+      }, 1000);
+    }
 
     return () => {
       clearTimeout(timerID);
     };
-  }, [secondsRemaining]);
+  }, [secondsRemaining, isMeditating]);
 
   return (
     <View className="flex-1">
